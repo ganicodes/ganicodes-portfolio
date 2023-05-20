@@ -1,12 +1,11 @@
 import "./App.css";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
-      <div>
-        <p className="hover:font-noto text-3xl font-bold text-orange-400">
-          This is tailwinds
-        </p>
+      <div className=" mx-auto min-h-screen bg-bg px-6 pt-20 font-noto text-white">
+        <Home />
       </div>
     </>
   );
