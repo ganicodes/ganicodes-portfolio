@@ -6,11 +6,17 @@ const Button = ({ title, link, isPrimary = false }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className={` transition-all duration-300 ease-linear mr-8 cta ${
+      className={` cta transition-all  duration-300 ease-linear md:mr-4 ${
         isPrimary ? "cta-primary" : ""
       }`}
     >
       {title}
+      <ion-icon
+        style={{ fontSize: "18px", padding: "6px", verticalAlign: "middle" }}
+        name={`${
+          title === "Say Hello!" ? "send-sharp" : "arrow-down-circle-sharp"
+        }`}
+      />
     </a>
   );
 };
