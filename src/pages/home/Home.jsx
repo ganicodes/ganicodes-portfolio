@@ -52,10 +52,14 @@ const RightSection = () => {
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-around">
-      <LeftSection />
-      <RightSection />
-    </div>
+    <>
+      <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-around">
+        <LeftSection />
+        <RightSection />
+      </div>
+      <hr className=" mt-8 h-1 w-[100vw] bg-bgVariant md:mt-12" />
+      {/* <hr className=" mt-2 h-1 w-[100vw] bg-primaryVariant md:mt-2" /> */}
+    </>
   );
 };
 
