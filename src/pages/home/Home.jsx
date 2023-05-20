@@ -1,22 +1,8 @@
 import Button from "../../components/shared/button/Button";
-function calculateExperience() {
-  let years = 0;
-  let months = 0;
-  const startDate = new Date("2021-10-30");
-  const currentDate = new Date();
-  const diff = Math.floor(currentDate.getTime() - startDate.getTime());
-  const day = 1000 * 60 * 60 * 24;
-  let month = diff / day / 30;
-  while (month > 12) {
-    years++;
-    month = month % 12;
-    if (month < 12) {
-      months = Math.floor(month);
-    }
-  }
+import "./home.css";
+import { calculateExperience } from "../../helper";
+import profilePic from "../../assets/profile.png";
 
-  return years + " years and " + months + " months";
-}
 const LeftSection = () => {
   return (
     <div>
@@ -56,11 +42,20 @@ const LeftSection = () => {
   );
 };
 
+const RightSection = () => {
+  return (
+    <div className="heroright z-10">
+      <img id="profilePic" src={profilePic} alt="Profile image" />
+    </div>
+  );
+};
+
 const Home = () => {
   return (
-    <>
+    <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-around">
       <LeftSection />
-    </>
+      <RightSection />
+    </div>
   );
 };
 

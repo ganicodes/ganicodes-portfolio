@@ -1,0 +1,47 @@
+.heroright {
+  position: relative;
+  /* padding-left: 1rem; */
+  /* background-image: linear-gradient(
+    to left top,
+    #00c834,
+    #00a67c,
+    #007f9a,
+    #00568b,
+    #002d59
+  ); */
+  /* transform: rotateBackground 10s infinite; */
+  border-radius: 50%;
+  /* border-left: 6px solid var(--clr-primary); */
+  /* border-right: 6px solid var(--clr-accent); */
+}
+
+.heroright::after {
+  background-color: theme("colors.primary");
+  -webkit-mask: url("../../assets/react.svg") no-repeat;
+  mask: url("../../assets/react.svg") no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  animation: animatedBackground 5s linear infinite;
+  animation-delay: 2s;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes animatedBackground {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#profilePic {
+  scale: 1.1;
+}
