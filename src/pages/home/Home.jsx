@@ -2,6 +2,7 @@ import Button from "../../components/shared/button/Button";
 import "./home.css";
 import { calculateExperience } from "../../helper";
 import profilePic from "../../assets/profile.png";
+import SocialMediaLinks from "../../components/social-media-links/SocialMediaLinks";
 
 const LeftSection = () => {
   return (
@@ -38,6 +39,7 @@ const LeftSection = () => {
           />
         </div>
       </div>
+      <SocialMediaLinks />
     </div>
   );
 };

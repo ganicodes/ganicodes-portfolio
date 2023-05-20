@@ -29,6 +29,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: theme("colors.bg");
+}
+
 * {
   margin: 0;
   padding: 0;
