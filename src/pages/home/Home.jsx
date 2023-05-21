@@ -3,6 +3,7 @@ import "./home.css";
 import { calculateExperience } from "../../helper";
 import profilePic from "../../assets/profile.png";
 import SocialMediaLinks from "../../components/social-media-links/SocialMediaLinks";
+import SectionSeparator from "../../components/shared/section-utils/SectionSeparator";
 
 const LeftSection = () => {
   return (
@@ -59,8 +60,7 @@ const Home = () => {
         <LeftSection />
         <RightSection />
       </div>
-      <hr className=" mt-8 h-1 w-[100vw] bg-bgVariant md:mt-12" />
-      {/* <hr className=" mt-2 h-1 w-[100vw] bg-primaryVariant md:mt-2" /> */}
+      <SectionSeparator />
     </>
   );
 };
