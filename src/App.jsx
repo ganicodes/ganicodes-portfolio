@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./pages/home/Home";
 import { GridLoader } from "react-spinners";
+import About from "./pages/about/About";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       ) : (
         <div className=" mx-auto min-h-[1000px] bg-bg px-4 pt-6 font-noto text-white md:px-0 md:pt-10">
           <Home />
+          <About />
         </div>
       )}
     </>
